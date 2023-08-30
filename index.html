@@ -21,14 +21,14 @@
 		var rollingId;
 
 		//정해진 초마다 함수 실행
-		rollingId = setInterval(function() { rollingStart(); }, 3500);//다음 이미지로 롤링 애니메이션 할 시간차
+		rollingId = setInterval(function() { rollingStart(); }, 2500);//다음 이미지로 롤링 애니메이션 할 시간차
     
 		function rollingStart() {
 			$banner.css("width", $bannerWidth * $length + "px");
 			$banner.css("height", $bannerHeight + "px");
 			//alert(bannerHeight);
 			//배너의 좌측 위치를 옮겨 준다.
-			$banner.animate({left: - $bannerWidth + "px"}, 800, function() { //숫자는 롤링 진행되는 시간이다.
+			$banner.animate(1000, function() { //숫자는 롤링 진행되는 시간이다.
 				//첫번째 이미지를 마지막 끝에 복사(이동이 아니라 복사)해서 추가한다.
 				$(this).append("<li>" + $(this).find("li:first").html() + "</li>");
 				//뒤로 복사된 첫번재 이미지는 필요 없으니 삭제한다.
@@ -46,10 +46,11 @@
 <body>
 	<div class="banner">
 		<ul style="width: 7000px; height: 142px; left: 0px;">
-		<li><img onclick="javascript:newin=window.open(&#39;about:blank&#39;); newin.location.href=&#39;https://monstarpc.co.kr/&#39;" style="cursor: pointer;" src="./ABKO_Rolling_Banner_files/image1.jpg" width="700" height="142px"></li>
-		<li><img onclick="javascript:newin=window.open(&#39;about:blank&#39;); newin.location.href=&#39;https://monstarpc.co.kr/&#39;" style="cursor: pointer;" src="./ABKO_Rolling_Banner_files/image2.jpg" width="700" height="142px"></li>
-		<!--<li><img onclick="javascript:newin=window.open(&#39;about:blank&#39;); newin.location.href=&#39;https://monstarpc.co.kr/&#39;" style="cursor: pointer;" src="./ABKO_Rolling_Banner_files/image3.jpg" width="700" height="142px"></li>-->
 	
+		<li><img onclick="javascript:newin=window.open(&#39;about:blank&#39;); newin.location.href=&#39;https://prod.danawa.com/info/?pcode=17432522&#39;" style="cursor: pointer;" src="./ABKO_Rolling_Banner_files/image2.jpg" width="700" height="142px"></li>
+		<li><img onclick="javascript:newin=window.open(&#39;about:blank&#39;); newin.location.href=&#39;https://prod.danawa.com/info/?pcode=18845126&#39;" style="cursor: pointer;" src="./ABKO_Rolling_Banner_files/image1.jpg" width="700" height="142px"></li>
+		<!--<li><img onclick="javascript:newin=window.open(&#39;about:blank&#39;); newin.location.href=&#39;https://prod.danawa.com/info/?pcode=21595391&#39;" style="cursor: pointer;" src="./ABKO_Rolling_Banner_files/image3.jpg" width="700" height="142px"></li>-->
+
 	</ul>
 	</div>
 
